@@ -1,0 +1,1 @@
+<?php//error_reporting(E_ALL^E_NOTICE);//include 'config.php';include 'prepare.php';include 'websiteStatus.php';//print_r($_GET);if(isset($_GET['p']))	$module = $_GET['p'];if(isset($_GET['on']))		$subModule = $_GET['on'];$router = new FrontRouter($module, $subModule);$router->render();

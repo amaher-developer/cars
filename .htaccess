@@ -1,0 +1,11 @@
+RewriteEngine ON
+RewriteCond %{HTTP_HOST} ^athantweets.com [NC] 
+RewriteRule ^(.*)$ http://www.athantweets.com/$1 [R=301]
+RewriteRule ^index.html$ index.php [L]
+RewriteRule ^default(.*)$ index.php?p=default [L]
+RewriteRule ^contact(.*)$ index.php?p=contact [L]
+RewriteRule ^payments-lifetime(.*)$ index.php?p=payments&t=1 [L]
+RewriteRule ^payments(.*)$ index.php?p=payments&t=0 [L]
+RewriteRule ^settings(.*)$ index.php?p=settings [L]
+RewriteRule ^testimonials(.*)$ index.php?p=testimonials [L]
+RewriteRule ^news-([0-9]+)(.*)$ index.php?p=newsContent&id=$1 [L]
